@@ -1,0 +1,31 @@
+# http server
+server:
+  # 基本配置
+  address: ":8000"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+  serverAgent: "super computer"
+
+  # cookie
+  # session
+
+# log
+logger:
+  path: "logs"
+  file: "{Y-m-d}.log"
+  level: "all"
+  stdout: false
+  writerColorEnable: true
+
+# mysql
+database:
+  default:
+    type: "mysql"
+    link: "root:123456@tcp(127.0.0.1:3306)/test"
+
+# redis
+redis:
+  # 单实例配置
+  default:
+    address: 127.0.0.1:6379
+    db: 1
